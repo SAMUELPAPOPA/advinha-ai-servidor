@@ -5,7 +5,8 @@ const server = require('http').Server(app);
 
 const peerServer = ExpressPeerServer(server, {
   debug: true,
-  path: '/'
+  path: '/',
+  proxied: true
 });
 
 app.use('/peerjs', peerServer);
